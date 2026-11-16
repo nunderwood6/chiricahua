@@ -1,0 +1,15 @@
+/**
+ * Styles for svelte components
+ * Custom grid system
+ * Colour and typography systems using CSS variable from Theme
+ * Utility classes for quick styling
+ * Copyright 2023 Reuters Graphics Style Guide
+ */
+
+// Base style rules
+@use 'reset/main' as reset;
+@use 'fonts/font-faces' as font-faces;
+@use 'colours/main' as colours;
+
+// Token classes
+@use 'token-classes' as *;

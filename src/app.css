@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+}
+
+/* HCN defensive coding */
+
+/*hide ads */
+broadstreet-zone-container {
+	display: none !important;
+}
+
+div[id*="zone_load"] {
+  display: none !important;
+}
+
+/* hide newsletter signup*/
+/* aside div.newspack-popup-container {
+	display: none !important;
+}*/
+
+/* center videopress element */
+
+.wp-block-jetpack-videopress.aligncenter {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+div.embedded-content {
+	display: block !important;
+	width: 100vw !important;
+	margin-left: calc(50% - 50vw) !important;
+	max-width: none !important;
+	all: unset;
+	font-family: "Tiempos Text", "Georgia", "serif";
+}
+
+span.gt {
+	font-family: 'GT America', sans-serif;
+}

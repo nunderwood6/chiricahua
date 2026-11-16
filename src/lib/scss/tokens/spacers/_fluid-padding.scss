@@ -1,0 +1,99 @@
+@use 'mixins/fluid-padding' as *;
+
+@each $level, $value in $fluid-padding-levels {
+  %fp-#{$level} {
+    padding: $value;
+  }
+  %fpt-#{$level} {
+    padding-block-start: $value;
+  }
+  %fpr-#{$level} {
+    padding-inline-end: $value;
+  }
+  %fpb-#{$level} {
+    padding-block-end: $value;
+  }
+  %fpl-#{$level} {
+    padding-inline-start: $value;
+  }
+  %fpx-#{$level} {
+    padding-inline-start: $value;
+    padding-inline-end: $value;
+  }
+  %fpy-#{$level} {
+    padding-block-start: $value;
+    padding-block-end: $value;
+  }
+
+  %\!fp-#{$level} {
+    padding: $value !important;
+  }
+  %\!fpt-#{$level} {
+    padding-block-start: $value !important;
+  }
+  %\!fpr-#{$level} {
+    padding-inline-end: $value !important;
+  }
+  %\!fpb-#{$level} {
+    padding-block-end: $value !important;
+  }
+  %\!fpl-#{$level} {
+    padding-inline-start: $value !important;
+  }
+  %\!fpx-#{$level} {
+    padding-inline-start: $value !important;
+    padding-inline-end: $value !important;
+  }
+  %\!fpy-#{$level} {
+    padding-block-start: $value !important;
+    padding-block-end: $value !important;
+  }
+}
+
+$fluid-padding-placeholder-levels: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9;
+
+@each $level, $value in $fluid-padding-placeholder-levels {
+  .fp-#{$level} {
+    @extend %fp-#{$level};
+  }
+  .fpt-#{$level} {
+    @extend %fpt-#{$level};
+  }
+  .fpr-#{$level} {
+    @extend %fpr-#{$level};
+  }
+  .fpb-#{$level} {
+    @extend %fpb-#{$level};
+  }
+  .fpl-#{$level} {
+    @extend %fpl-#{$level};
+  }
+  .fpx-#{$level} {
+    @extend %fpx-#{$level};
+  }
+  .fpy-#{$level} {
+    @extend %fpy-#{$level};
+  }
+
+  .\!fp-#{$level} {
+    @extend %\!fp-#{$level};
+  }
+  .\!fpt-#{$level} {
+    @extend %\!fpt-#{$level};
+  }
+  .\!fpr-#{$level} {
+    @extend %\!fpr-#{$level};
+  }
+  .\!fpb-#{$level} {
+    @extend %\!fpb-#{$level};
+  }
+  .\!fpl-#{$level} {
+    @extend %\!fpl-#{$level};
+  }
+  .\!fpx-#{$level} {
+    @extend %\!fpx-#{$level};
+  }
+  .\!fpy-#{$level} {
+    @extend %\!fpy-#{$level};
+  }
+}

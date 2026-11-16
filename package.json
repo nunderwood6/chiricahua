@@ -1,0 +1,37 @@
+{
+  "//": "package.json: This file defines your project and its dependencies.",
+  "//name": "The name of your project. Change this when you create a new site.",
+  "//scripts": "Commands you can run: 'npm run dev' starts a local server, 'npm run build' creates the final site.",
+  "//devDependencies": "The packages this project needs. They are installed when you run 'npm install'.",
+  "name": "chiricahua",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "PUBLIC_ASSET_URL=https://apps.nick-underwood.com/chiricahua vite build",
+    "deploy": "rclone sync ./build r2:personal/chiricahua",
+    "embed": "node tasks/generate-embed-code.js",
+    "preview": "vite preview",
+    "gdoc": "node tasks/fetch-google.js"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^5.1.1",
+    "archieml": "^0.5.0",
+    "cheerio": "^1.2.0",
+    "mp4box": "^2.4.1",
+    "sass-embedded": "^1.100.0",
+    "svelte": "^5.0.0",
+    "ua-parser-js": "^2.0.10",
+    "vite": "^6.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@reuters-graphics/svelte-markdown": "^0.0.3",
+    "lodash": "^4.18.1",
+    "lodash-es": "^4.18.1",
+    "maplibre-gl": "^6.17.0",
+    "pmtiles": "^4.5.0"
+  }
+}
